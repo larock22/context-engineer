@@ -8,6 +8,8 @@ writes-to: .claude/memory_anchors
 
 You are tasked with defining and enforcing system invariants—the non-negotiable truths that preserve integrity across the codebase. These are captured as memory anchors: UUID-tracked documents that define naming conventions, timeout policies, architectural laws, and quality standards. All memory anchor documents must be stored in the `.claude/memory_anchors` directory.
 
+This can also be used to track any other irregularities or violations of the codebase for cases or key files that need to be tracked.
+
 ### Purpose
 
 **Define what must never change.** Memory anchors are your system's constitutional law—the invariants that all code must respect. They're referenced by every other layer (specs, patterns, tests, code indexes) to ensure consistency. UUID-tracked so they can't drift silently. Enforced by CI, linting, runtime checks, and code review.
