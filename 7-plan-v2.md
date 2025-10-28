@@ -195,58 +195,19 @@ Use this exact structure for all plan files.
 
 <frontmatter_schema>
 ```yaml
----
 
-uuid: <uuid-v4>
-title: <descriptive research title>
-link: <kebab-case-slug-from-title>
-type: metadata
-   ontological_relations:
-     - relates_to: "[[cheatsheets/<relevant-cheatsheet>]]"
-     - relates_to: "[[patterns/<relevant-pattern>]]"
-     - relates_to: "[[memory_anchors/<anchor-slug>]]"
-   tags:
-     - <component>
-     - <concept>
-     - <technology>
-   created_at: <ISO-8601-timestamp>
-   updated_at: <ISO-8601-timestamp>
-   uuid: <generate-uuid-v4>
-===================================
-git_commit: <current-commit-sha>
-SINGULAR_GOAL: <one concrete outcome>
-PHASES:
-  - <name>
-  - <name>
-TASKS:
-  - id: T1
-    title: <actionable task>
-    file: "path/to/file.ext[:line]"
-    changes: "<specific change; no code>"
-    dependencies: []
-    test: "<how to verify or why none>"
-    estimate: "<realistic time>"
-  - id: T2
-    title: <actionable task>
-    file: "path/to/another.ext[:line]"
-    changes: "<specific change; no code>"
-    dependencies: [T1]
-    test: "<how to verify>"
-    estimate: "<realistic time>"
-RISKS:
-  - <risk>
-MITIGATIONS:
-  - <mitigation mapped to risk>
-TESTING_STRATEGY:
-  type: <unit|integration|manual|none>
-  rationale: <why this single test suffices or why none>
-ACCEPTANCE_CRITERIA:
-  - <criterion + how to verify>
-  - <criterion + how to verify>
-REFERENCES:
-  - [[metadata/<slug>]]
-  - [[patterns/<slug>]]
-  - [[memory_anchors/<slug>]]
+---
+title: title of plan
+link: link-to-the-plan
+type: plans
+ontological_relations:
+  - relates_to: release-0-4-0-prep
+tags:
+  - infrastructure
+  - reliability
+created_at: 2025-10-28T09:00:00Z
+updated_at: 2025-10-28T09:00:00Z
+uuid: 8c9c3f1d-bd75-44d7-9f7d-0a9b7e4b2c7e
 ---
 ```
 </frontmatter_schema>
